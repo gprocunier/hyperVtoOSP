@@ -27,7 +27,7 @@ This guide outlines the process for migrating a virtual machine (VM) from Micros
 ### 1. Download the virtio-win driver iso and run the install MSI
 - ![Splash Screen](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-install.png?raw=true)
 - Select the default options.
-- !(Unsigned install)(https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-unsigned.png?raw=true)
+- ![Unsigned install](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-unsigned.png?raw=true)
 - Please see the unsigned public repo information available here: https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md#virtio-win-driver-signatures
 
 ### 2. Download the cloudbase-init install msi and run it

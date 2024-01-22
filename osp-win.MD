@@ -24,12 +24,12 @@ This guide outlines the process for migrating a virtual machine (VM) from Micros
 ## Detailed Steps
 
 ### Windows Team - Preparation
-### 1. Download the virtio-win driver iso and run the install MSI
+### 1. Download the virtio-win driver iso and run the install MSI in the VM being migrated.
 - ![Splash Screen](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-install.png?raw=true)
 - Select the default options for the driver components and select YES when the unsigned driver prompt appears.  Please see the unsigned public repo information available here: https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md#virtio-win-driver-signatures
 - ![Unsigned install](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-unsigned.png?raw=true)
 
-### 2. Download the cloudbase-init install msi and run it
+### 2. Download the cloudbase-init install msi and run it in the VM being migrated.
 - ![Splash Screen](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/cloudbase-install.png?raw=true)
 - ![Service Configuration](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/cloudbase-config.png?raw=true)
 - This configures the user that cloudbase-init will install and use.  The purpose of this account is to create control linkage between OpenStack and the windows instance to provide first-time-boot configuration "as required".

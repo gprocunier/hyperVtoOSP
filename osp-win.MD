@@ -23,18 +23,11 @@ This guide outlines the process for migrating a virtual machine (VM) from Micros
 
 ## Detailed Steps
 
-### Windows Team - Prep-work
-
-- [Certified Guest Operating Systems in Red Hat OpenStack Platform](https://access.redhat.com/articles/973163)
-- Note down the MAC addresses of the NICs the IP and the VLAN of the VM.
-- Install drivers in the VM prior to export. Refer to the [virtio-win drivers installation guide](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md).
-- Install the cloud-init agent for Windows. Instructions can be found at the [Cloudbase cloud-init for Windows page](https://github.com/cloudbase/cloudbase-init).
-
 ### Windows Team - Preparation
 ### 1. Download the virtio-win driver iso and run the install MSI
 
 ### 2. Download the cloudbase-init install msi and run it
-- Splash Screen
+- ![Splash Screen](https://github.com/gprocunier/hyperVtoOSP/blob/main/images/virtio-win-install.png?raw=true)
 - Service Configuration - this configures the user that cloudbase-init will install and use.  The purpose of this account is to create control linkage between OpenStack and the windows instance to provide first-time-boot configuration "as required".
 - Installation finish - if the VM is going to be used as a general purpose template for subsequent VMs then both sysprep and shutdown after installation should be selected.  If the vm is just being migrated as-is then both can be left unchecked.
 

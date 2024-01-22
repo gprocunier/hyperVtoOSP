@@ -48,7 +48,8 @@ This guide outlines the process for migrating a virtual machine (VM) from Micros
 ```bash
 Export-VM -Name \<vm name\> -Path \<path\>
 ```
-### Unix Team - 2. Convert the VM Disk to a Compatible Format
+
+### Unix Team - 1. Convert the VM Disk to a Compatible Format
 
 - Use `qemu-img` or similar tool to convert the VM disk to a RAW format.
 
@@ -56,7 +57,7 @@ Export-VM -Name \<vm name\> -Path \<path\>
   qemu-img convert -p -f vhdx -O raw source.vhdx destination.raw
   ```
 
-### Unix Team - Upload the Converted Image to OpenStack
+### Unix Team - 2. Upload the Converted Image to OpenStack
 
 - Use the OpenStack CLI or Horizon dashboard to upload the QCOW2 image.
 
@@ -64,7 +65,7 @@ Export-VM -Name \<vm name\> -Path \<path\>
   openstack image create "VM_Name" --file destination.qcow2 --disk-format raw --container-format bare --public
   ```
 
-### Unix Team - Create a New Instance in OpenStack Using the Uploaded Image
+### Unix Team - 3. Create a New Instance in OpenStack Using the Uploaded Image
 
 - Launch a new instance in OpenStack using the uploaded image.
 

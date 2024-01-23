@@ -54,15 +54,15 @@ Export-VM -Name \<vm name\> -Path \<path\>
 - Use `qemu-img` or similar tool to convert the VM disk to a RAW format.
 
   ```bash
-  qemu-img convert -p -f vhdx -O raw source.vhdx destination.raw
+  qemu-img convert -p source.vhdx -O raw destination.raw
   ```
 
 ### Unix Team - 2. Upload the Converted Image to OpenStack
 
-- Use the OpenStack CLI or Horizon dashboard to upload the QCOW2 image.
+- Use the OpenStack CLI or Horizon dashboard to upload the RAW image.
 
   ```bash
-  openstack image create "VM_Name" --file destination.qcow2 --disk-format raw --container-format bare --public
+  openstack image create "VM_Name" --file destination.raw --disk-format raw --container-format bare --public
   ```
 
 ### Unix Team - 3. Create a New Instance in OpenStack Using the Uploaded Image

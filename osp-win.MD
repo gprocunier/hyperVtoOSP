@@ -4,7 +4,7 @@ This guide outlines the process for migrating a virtual machine (VM) from Micros
 
 ## Prerequisites
 - [Certified Guest Operating Systems in Red Hat OpenStack Platform](https://access.redhat.com/articles/973163)
-- [virtio-win drivers installation guide](https://github.com/)
+- [virtio-win drivers installation guide](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md)
 - [Cloudbase cloud-init for Windows page](https://github.com/cloudbase/cloudbase-init)
 - [Windows Instances Cloud Init Guide](https://github.com/gprocunier/dcib/blob/main/openstack/misc/windows-instances-cloud-init.md)
 ---

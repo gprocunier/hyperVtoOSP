@@ -80,6 +80,9 @@ Export-VM -Name \<vm name\> -Path \<path\>
 ## Post-Migration Checks
 
 - After migration, verify the functionality of the VM in the OpenStack environment.
+```bash
+openstack server show VM_NAME
+```
 
 ## Troubleshooting
 
